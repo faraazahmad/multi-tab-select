@@ -5,11 +5,22 @@ function untoggleClassOnAllTabs() {
 }
 
 TabList = document.querySelectorAll('.tab');
-// console.log(tabList);
 
-TabList.forEach((tab) => {
-    tab.addEventListener("click", () => {
-        untoggleClassOnAllTabs();
-        tab.classList.add('current');
-    })
+document.addEventListener("keydown", (key) => {
+    if (key.keyCode == 17) {
+        TabList.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                // untoggleClassOnAllTabs();
+                tab.classList.add('current');
+            })
+        }) 
+    }
+    else {
+        TabList.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                untoggleClassOnAllTabs();
+                tab.classList.add('current');
+            })
+        })
+    }
 })
