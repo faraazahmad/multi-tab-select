@@ -1,0 +1,26 @@
+.tab-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.tab {
+    padding: 7.5px 12.5px;
+    background-color: #eee;
+    color: #1b1b1b;
+    border-top: solid 5px transparent;
+    display: inline-block;
+    margin: 0;
+    transition: border-top-color 0.15s ease-out;
+}
+
+.tab:hover {
+    border-top-color: #ccc;
+    background-color: #efefef;
+}
+
+.current, .current:hover {
+    border-top-color: #7798ff;
+}
