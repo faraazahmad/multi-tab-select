@@ -11,20 +11,27 @@ function toggleCurrentTab(targetTab) {
     targetTab.classList.toggle('current');
 }
 
+let isCtrlPressed = false;
+
 document.addEventListener("keydown", (key) => {
     if (key.keyCode == 17) {
-        TabList.forEach((tab) => {
-            tab.removeEventListener("click", selectOnlyCurrentTab(tab));
-            tab.addEventListener("click", toggleCurrentTab(tab));
-        })
+        isCtrlPressed = true;
     }
 });
 
 document.addEventListener("keyup", (key) => {
     if (key.keyCode == 17) {
-        TabList.forEach((tab) => {
-            tab.removeEventListener("click", toggleCurrentTab(tab));
-            tab.addEventListener("click", selectOnlyCurrentTab(tab));
-        })
+        isCtrlPressed = false;
     }
 });
+
+TabList.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        if (isCtrlPressed) {
+            toggleCurrentTab(tab);
+        }
+        else {
+            selectOnlyCurrentTab(tab);
+        }
+    })
+})
