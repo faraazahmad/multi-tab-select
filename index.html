@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        
-        <title>Multi Tabs</title>
-    </head>
-    <body>
-        <div class="tab-wrapper">
-            <div class="tab">asasd</div>
-            <div class="tab">aFDS</div>
-            <div class="tab">ADSA</div>
-            <div class="tab">ASCDSA</div>
-            <div class="tab">FASF</div>
-            <div class="tab">DFDSF</div>
-            <div class="tab">thrthdrt</div>
-            <div class="tab">htshr</div>
-            <div class="tab">htrshtrx</div>
-            <div class="tab">strhtrsh</div>
-        </div>
-    </body>
-    <script type="text/javascript" src="tabs.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<title>Multi Tabs</title>
+	</head>
+	<body>
+		<div class="tab-wrapper"></div>
+		<div id="new-tab-button">+</div>
+		<br><br>
+		<div class="description">
+			<hr>
+			<h1>Tab MultiSelect Prototype</h1>
+			<p>
+				<h3>Features:</h3>
+				1) Select single tab using single mouse click<br>
+				2) Select multiple tabs one by one using ctrl+click<br>
+				3) Select multiple tabs at once using shift+click<br>
+				4) Close all selected tabs at once (includes closing only current tab)<br>
+
+				<h3>Current bug(s):</h3>
+				1) After closing tab(s), the last tab from the remaining tabs doesn't get selected (opposed to general browser behaviour)
+			</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="tabs.js"></script>
 </html>
